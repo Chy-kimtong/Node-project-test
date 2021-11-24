@@ -6,9 +6,12 @@ const morgan =require('morgan');
 const res = require('express/lib/response');
 const geocode = require('./utils/geocode');
 const forecast = require('./utils/forecast');
+
+const port = process.env.PORT || 3000;
 app.listen(3000,()=>{
-    console.log("server is up on port 3000");
+    console.log("server is up on port :",port);
 })
+
 
 // define paths for express config
 const staticFilePath = path.join(__dirname,'../staticFile');
