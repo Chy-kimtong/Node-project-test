@@ -10,6 +10,7 @@ const forecast = (latitude, longtitude, callback)=>{
         } else if (body.error){
             callback("unable to find your location",undefined);
         }else{
+            console.log(body['features']);
             const location = body['features'][0]['place_name'];
             callback(undefined,`Location is in ${location} which have latitude is ${latitude} and longtitude is ${longtitude}`);
         }
